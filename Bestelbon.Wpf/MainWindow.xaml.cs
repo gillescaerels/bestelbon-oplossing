@@ -58,7 +58,7 @@ namespace Bestelbon.Wpf
             //haal de benodigde info op uit de GUI
             artikel = txtArtikelNaam.Text;
 
-            //berekeningen
+            //berekeningen 
             lijnPrijs = prijsIncl* aantal;
             totaalAantal += aantal;
             totaalPrijs += lijnPrijs;

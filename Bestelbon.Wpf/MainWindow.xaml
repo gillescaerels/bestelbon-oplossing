@@ -1,0 +1,33 @@
+﻿<Window x:Class="Bestelbon.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bestelbon.Wpf"
+        mc:Ignorable="d"
+        Title="Bestelbon" Height="285.543" Width="665.916" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="150" Margin="21,38,0,0" VerticalAlignment="Top" Width="63" Background="#FFF6EB4F">
+            <Label Content="Artikel" Margin="0,5,0,0"/>
+            <Label Content="Prijs excl."/>
+            <Label Content="Btw-%" Margin="0,10,0,0" Height="38"/>
+            <Label Content="Prijs incl." Margin="0,15,0,0"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="150" Margin="91,38,0,0" VerticalAlignment="Top" Width="169" Background="#FFF6EB4F">
+            <TextBox x:Name="txtArtikelNaam" Height="23" TextWrapping="Wrap" Margin="5,5,5,0"/>
+            <TextBox x:Name="txtPrijsExcl" Height="23" TextWrapping="Wrap" Margin="5,5,5,0" HorizontalContentAlignment="Right" LostFocus="txtPrijsExcl_LostFocus"/>
+            <ListBox x:Name="lstBtw" Height="52" Margin="5,5,5,0" HorizontalContentAlignment="Right" MouseLeftButtonUp="lstBtw_MouseLeftButtonUp"/>
+            <Label x:Name="lblPrijsIncl" Content="" Margin="5,5,5,0" Background="#FFF7F6F6" HorizontalContentAlignment="Right"/>
+        </StackPanel>
+        <Label Content="Aantal" HorizontalAlignment="Left" Margin="21,204,0,0" VerticalAlignment="Top" Width="63"/>
+        <Label x:Name="lblAantal" Content="1" HorizontalAlignment="Left" Margin="91,204,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnPlus1" Content="+" HorizontalAlignment="Left" Margin="113,198,0,0" VerticalAlignment="Top" Width="22" Click="btnPlus1_Click"/>
+        <Button x:Name="btnMin1" Content="-" HorizontalAlignment="Left" Margin="113,217,0,0" VerticalAlignment="Top" Width="22" Click="btnMin1_Click"/>
+        <TextBlock x:Name="tbkBestelling" HorizontalAlignment="Left" Margin="446,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="147" Width="202" Padding="5" Background="#FFF6EB4F"/>
+        <Button x:Name="btnBestel" Content="Bestel" HorizontalAlignment="Left" Margin="166,207,0,0" VerticalAlignment="Top" Width="94" Click="btnBestel_Click"/>
+        <Label x:Name="lblTotaalAantal" Content="Aantal: 0" HorizontalAlignment="Left" Margin="291,38,0,0" VerticalAlignment="Top" Height="27" Width="150"/>
+        <Label x:Name="lblBesteldeArtikelen" Content="" HorizontalAlignment="Left" Margin="291,73,0,0" VerticalAlignment="Top" Width="150" Background="#FFF6EB4F"/>
+        <Label Content="Bestelling" HorizontalAlignment="Left" Margin="291,2,0,0" VerticalAlignment="Top" Width="357" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblTotaalPrijs" Content="Totaalprijs: € 0" HorizontalAlignment="Left" Margin="478,38,0,0" VerticalAlignment="Top" Height="27" Width="170" HorizontalContentAlignment="Right"/>
+    </Grid>
+</Window>
